@@ -6,7 +6,8 @@ class Transaction
   field :backers,       type: User
   field :coincoins,     type: CoinCoin
   field :address,       type: String
-  field :goal,          type: Number
+  field :goal,          type: Integer
+  field :shares,        type: Integer
   before_create :generate_address
 
   private

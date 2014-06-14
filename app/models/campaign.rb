@@ -7,7 +7,6 @@ class Campaign
   field :end_date,        type: Date
 
   has_many :transactions
-  has_one :company
 
   # Founders can create transaction
   # they have to mention how many shares they want to create
@@ -16,13 +15,12 @@ class Campaign
   # @param share_value [Integer] the coincoins value of each shares
   # @return [Transaction] the new transaction
   def create_transaction shares, share_value
+    transactions = [] unless transactions
     t = Transaction.new
     t.shares = shares
     t.goal = shares * share_value
     t.save
     transactions << t
-    company.add_shares shares
-    company.save
     t
   end
 

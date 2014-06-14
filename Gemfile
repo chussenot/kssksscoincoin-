@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 def linux?;     !! (RUBY_PLATFORM =~ /linux/) ;     end
 def darwin?;    !! (RUBY_PLATFORM =~ /darwin/) ;    end

@@ -1,11 +1,11 @@
 %h1 KssKssCoinCoin
-
-.ui.items
-  - @campaigns.each do |c|
-    .item.campaign
-      .content
-        .name= c.name
-        .company
-          .name= c.company.name
-        %p.description= c.description 
-      .ui.button.green= 'Add an option !'
+- unless @campaigns.nil?
+  .ui.items
+    - @campaigns.each do |c|
+      .item.campaign
+        .content
+          .name= c.name
+          .company
+            .name= c.company.name
+          %p.description= c.description
+        .ui.button.green= 'Add an option !'

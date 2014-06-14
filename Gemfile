@@ -41,7 +41,6 @@ end
 
 group :development, :test do
   gem 'fabrication'
-  gem 'ffaker'
   gem 'rspec-rails'
   gem 'pry-rails'
 end

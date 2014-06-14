@@ -23,8 +23,8 @@ big_company = Company.create({
 (1..10).to_a.each do |i|
 	start_date = time_rand()
 	c = Campaign.new({
-		name: "My campaign",
-		description: "Please help us...",
+		name: Faker::Company.name,
+		description: Faker::Lorem.paragraph,
 		start_date: start_date,
 		end_date: start_date + 3.months
 	})

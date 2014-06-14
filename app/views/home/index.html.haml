@@ -1,4 +1,3 @@
-%h1 KssKssCoinCoin
 - unless @campaigns.nil?
   .ui.items
     - @campaigns.each do |c|
@@ -6,4 +5,4 @@
         .content
           .name= c.name
           %p.description= c.description
-        .ui.button.green= 'Add an option !'
+        .ui.button.add_option.red= 'Add an option !'

@@ -52,7 +52,6 @@ group :test do
   gem 'faker'
   gem 'launchy'
   gem 'selenium-webdriver'
-  gem 'simplecov'
   gem 'mongoid-rspec'
 end
 

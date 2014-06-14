@@ -14,5 +14,11 @@ module Kssksscoincoin
     I18n.enforce_available_locales = true
     # Add Bower components
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+
+    config.generators do |g|
+      g.test_framework      :rspec, fixture: true
+      g.fixture_replacement :fabrication
+    end
+    
   end
 end

@@ -30,7 +30,7 @@ big_company = Company.create({
 	})
 	c.create_transaction 100, 1000
 	c.save
-	big_company.campaigns = [] unless big_company.campaigns
-	big_company.campaigns << c
+	# big_company.campaigns = [] unless big_company.campaigns
+	# big_company.campaigns << c
 end
-big_company.save
+# big_company.save

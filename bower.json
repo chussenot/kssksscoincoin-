@@ -1,0 +1,21 @@
+{
+  "name": "kssksscoincoin",
+  "version": "0.0.0",
+  "authors": [
+    "chussenot <chussenot@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
+    "semantic-ui": "~0.18.0",
+    "momentjs": "~2.7.0"
+  }
+}

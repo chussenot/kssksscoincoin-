@@ -24,6 +24,8 @@ gem 'kaminari'
 gem 'grape'
 gem 'puma'
 gem 'rails_12factor'
+gem 'bitcoin-ruby', git: 'https://github.com/lian/bitcoin-ruby', branch: 'master', require: 'bitcoin'
+gem 'coinbase'
 
 group :development do
   gem 'spring'

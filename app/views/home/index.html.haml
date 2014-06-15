@@ -5,4 +5,8 @@
         .content
           .name= c.name
           %p.description= c.description
-        .ui.button.add_pledge.red{"data-bitcoin_address"=> c.bitcoin_address}= 'Add pledge'
+          .ui.striped.progress
+            .bar{style:'width: 30%'}
+          %p Raise B40 of B100
+
+        .ui.button.add_pledge.red{"data-bitcoin_address"=> c.bitcoin_address}= 'Fund this project'

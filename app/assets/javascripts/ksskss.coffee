@@ -19,5 +19,7 @@ window.KssKss.Application = class Application
         pledge_amount: $('input[name="pledge_amount"]').val()
       ).done (transaction) ->
         console.log transaction
+        $(".ui.modal.transaction").modal('show')
+
 
 

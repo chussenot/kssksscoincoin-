@@ -23,7 +23,8 @@
     %a.item.contact
       %i.icon.mail
       Contact us
-  .sub.menu
-    %a.item.activity Activity Feed
-    %a.item.campaigns Campaigns
-    %a.item.coinscoins CoinCoins
+  - if controller_name == 'profile'
+    .sub.menu
+      %a.item.activity Activity Feed
+      %a.item.campaigns Campaigns
+      %a.item.coinscoins CoinCoins

@@ -5,10 +5,11 @@ window.KssKss.Menu = class Menu
       $('.ui.compact.menu').dropdown()
       buttons = [
       	{btn: 'a.item.home',         url:	'/'},
-      	{btn: 'a.item.coinscoins',   url: '/profile/show'},
+      	{btn: 'a.item.coinscoins',   url: '/coinscoins/show'},
       	{btn: 'a.item.campaigns',    url: '/campaign/index'},
       	{btn: 'a.item.activity',	   url: '/activity/show'},
-        {btn: 'a.item.contact',      method: KssKss.Menu.openContact}
+        {btn: 'a.item.contact',      method: KssKss.Menu.openContact},
+        {btn: 'a.item.profile',      url: '/profile/show'}
       ]
       @bindEvents(buttons)
       url = window.location.href.replace(/^.*\/\/[^\/]+/, '')

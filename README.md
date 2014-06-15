@@ -14,5 +14,8 @@ bundle exec rails s
 [Download Bitcoin core](https://bitcoin.org/fr/telecharger)
 `open -a /Applications/Bitcoin-Qt.app --args "-testnet"`
 
+## Build Bitcoind on OSX
+https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
+
 
 

@@ -9,4 +9,4 @@
             .bar{style:'width: 30%'}
           %p= "Raise ... of B#{c.amount}"
 
-        .ui.button.add_pledge.red{"data-bitcoin_address"=> c.bitcoin_address}= 'Fund this project'
+        .ui.button.add_pledge.red{"data-bitcoin_address"=> c.bitcoin_address, "data-id"=> c._id.to_s }= 'Fund this project'

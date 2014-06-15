@@ -31,7 +31,7 @@ class API < Grape::API
   post :sign do
     transaction_sign    = params[:transaction_sign]
     campaign_id         = params[:campaign_id]
-    campaign            = Campaign.find(campaign_id)
+    campaign            = Campaign.all.first
     campaign.transaction_signs = [] if campaign.transaction_signs.nil? 
     campaign.transaction_signs << transaction_sign
     campaign.save

@@ -6,5 +6,6 @@ class CampaignController < ApplicationController
   end
 
   def create
+  	@campaign = Campaign.new
   end
 end

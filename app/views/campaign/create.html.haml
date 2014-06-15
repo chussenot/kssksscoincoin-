@@ -1,1 +1,6 @@
-%h1 Create a new Campaign
+%h2 Create a new Campaign
+
+= simple_form_for @campaign do |f|
+  = f.input :name
+  = f.input :bitcoin_address
+  = f.button :submit

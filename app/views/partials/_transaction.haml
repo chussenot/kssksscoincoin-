@@ -3,7 +3,17 @@
   .header
     Transaction
   .ui.form.segment
-    #code
+    .ui.form.segment.inverted
+      .field
+        %label JSON
+        #deflat
+      .field
+        %label RAW
+        #raw
+      .field.fluid
+        %label Sign Transaction
+        %input{placeholder: "Sign Transaction", type: "text", name: "transaction_sign"}/
+
   .actions
     .ui.button Cancel
-    .ui.button.request_pledge OK
+    .ui.button.sign_transaction OK

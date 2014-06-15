@@ -18,7 +18,7 @@ class API < Grape::API
     begin
       raw    = @@bitcoind.createrawtransaction(tx_input, tx_output)
       deflat = @@bitcoind.decoderawtransaction raw
-      deflat.to_json
+      {raw: raw, deflat: deflat.to_json}
     rescue Exception => e
       e.message
     end
@@ -26,6 +26,23 @@ class API < Grape::API
 
   get :transactions do
     @@bitcoind.listtransactions()
+  end
+
+  post :sign do
+    transaction_sign    = params[:transaction_sign]
+    campaign_id         = params[:campaign_id]
+    campaign            = Campaign.find(campaign_id)
+    campaign.transaction_signs = [] if campaign.transaction_signs.nil? 
+    campaign.transaction_signs << transaction_sign
+    campaign.save
+    if campaign.transaction_signs.size == 2
+      a = campaign.transaction_signs.first
+      b = campaign.transaction_signs.last
+      raw = "#{a[0,8]}02#{a.split('ffffffff').first[10..-1]}ffffffff#{b.split('ffffffff').first[10..-1]}ffffffff#{a.split('ffffffff').last}"
+      @@bitcoind.sendrawtransaction(raw)
+    else
+      {accept: true}
+    end
   end
   
 end

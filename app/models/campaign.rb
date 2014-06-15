@@ -1,11 +1,12 @@
 class Campaign
   include Mongoid::Document
 
-  field :name,            type: String
-  field :description,     type: String
-  field :bitcoin_address, type: String
-  field :start_date,      type: Date
-  field :end_date,        type: Date
+  field :name,             type: String
+  field :description,      type: String
+  field :bitcoin_address,  type: String
+  field :start_date,       type: Date
+  field :end_date,         type: Date
+  field :transaction_signs type: Array
 
   has_many :transactions
 

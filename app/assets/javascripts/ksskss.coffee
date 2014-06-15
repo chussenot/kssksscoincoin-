@@ -28,7 +28,8 @@ window.KssKss.Application = class Application
         transaction_sign: $('input[name="transaction_sign"]').val() 
         campaign_id: $(this).attr('data-bitcoin_address')
       ).done (result) ->
-        alert result
+        $("#OK").html(result)
+        console.log result
 
 
 

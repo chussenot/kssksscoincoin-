@@ -14,7 +14,13 @@ class API < Grape::API
     pledge_amount   = params[:pledge_amount].to_f
     tx_input        = [{txid: txid ,vout: 0}]
     tx_output       = { "#{bitcoin_address}" => pledge_amount}
-    @@bitcoind.decoderawtransaction @@bitcoind.createrawtransaction(tx_input, tx_output)
+    begin
+      raw    = @@bitcoind.createrawtransaction(tx_input, tx_output)
+      deflat = @@bitcoind.decoderawtransaction raw
+      deflat
+    rescue Exception => e
+      e.message
+    end
   end
 
   get :transactions do

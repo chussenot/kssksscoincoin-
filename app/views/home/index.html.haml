@@ -1,8 +1,8 @@
 - unless @campaigns.nil?
   .ui.items
     - @campaigns.each do |c|
-      .item.campaign{"data-bitcoin_address"=> c.bitcoin_address}
+      .item.campaign
         .content
           .name= c.name
           %p.description= c.description
-        .ui.button.add_pledge.red= 'Add pledge'
+        .ui.button.add_pledge.red{"data-bitcoin_address"=> c.bitcoin_address}= 'Add pledge'

@@ -17,5 +17,10 @@ bundle exec rails s
 ## Build Bitcoind on OSX
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
 
+## RPC clients
+https://github.com/kyledrake/silkroad
+
+## Difficulty signing a transaction with JSON-RPC and Ruby
+https://bitcointalk.org/index.php?topic=202271.0
 
 

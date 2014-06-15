@@ -1,4 +1,6 @@
 Kssksscoincoin::Application.routes.draw do
+  get "home/index"
+
   get "campaign/index"
   get "campaign/show"
   get "campaign/create"
@@ -9,8 +11,7 @@ Kssksscoincoin::Application.routes.draw do
   get "profile/coinscoins"
   get "profile/settings"
 
-  resources :contracts
+  mount API => '/api'
 
-  get "home/index"
   root to: 'home#index'
 end

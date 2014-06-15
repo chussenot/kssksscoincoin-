@@ -6,7 +6,7 @@ class Campaign
   field :bitcoin_address,  type: String
   field :start_date,       type: Date
   field :end_date,         type: Date
-  field :transaction_signs type: Array
+  field :transaction_signs, type: Array
 
   has_many :transactions
 

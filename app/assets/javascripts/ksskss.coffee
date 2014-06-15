@@ -24,8 +24,8 @@ window.KssKss.Application = class Application
     $('.ui.button.sign_transaction').click ->
       $.post("/api/sign",
         transaction_sign: $('input[name="transaction_sign"]').val() 
-      ).done (transaction) ->
-        alert 'OK'
+      ).done (result) ->
+        alert result
 
 
 

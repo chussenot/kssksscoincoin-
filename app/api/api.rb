@@ -14,7 +14,7 @@ class API < Grape::API
     bitcoin_address = params[:bitcoin_address]
     pledge_amount   = params[:pledge_amount].to_f
     tx_input        = [{txid: txid ,vout: 0}]
-    tx_output       = { "#{bitcoin_address}" => pledge_amount}
+    tx_output       = { "#{bitcoin_address}" => 0.50}
     begin
       raw    = @@bitcoind.createrawtransaction(tx_input, tx_output)
       deflat = @@bitcoind.decoderawtransaction raw

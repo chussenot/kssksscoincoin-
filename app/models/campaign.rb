@@ -1,12 +1,13 @@
 class Campaign
   include Mongoid::Document
 
-  field :name,             type: String
-  field :description,      type: String
-  field :bitcoin_address,  type: String
-  field :start_date,       type: Date
-  field :end_date,         type: Date
+  field :name,              type: String
+  field :description,       type: String
+  field :bitcoin_address,   type: String
+  field :start_date,        type: Date
+  field :end_date,          type: Date
   field :transaction_signs, type: Array
+  field :amount,            type: Float, default: 0.50
 
   has_many :transactions
 
@@ -28,6 +29,6 @@ class Campaign
 
   # @return [Integer] the amount of coincoins to this campaign
   def coincoin_amount
-    transactions.map(&:gaol).reduce(:+)
+    transactions.map(&:goal).reduce(:+)
   end
 end

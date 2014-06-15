@@ -7,6 +7,6 @@
           %p.description= c.description
           .ui.striped.progress
             .bar{style:'width: 30%'}
-          %p Raise B40 of B100
+          %p= "Raise ... of B#{c.amount}"
 
         .ui.button.add_pledge.red{"data-bitcoin_address"=> c.bitcoin_address}= 'Fund this project'

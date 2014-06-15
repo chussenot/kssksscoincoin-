@@ -27,6 +27,7 @@ gem 'rails_12factor'
 gem 'bitcoin-ruby', git: 'https://github.com/lian/bitcoin-ruby', branch: 'master', require: 'bitcoin'
 gem 'coinbase'
 gem 'ffaker'
+gem 'simple_form'
 
 group :development do
   gem 'spring'

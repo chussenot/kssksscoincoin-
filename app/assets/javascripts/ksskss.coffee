@@ -18,8 +18,8 @@ window.KssKss.Application = class Application
         bitcoin_address: $(this).attr('data-bitcoin_address')
         pledge_amount: $('input[name="pledge_amount"]').val()
       ).done (transaction) ->
-        console.log transaction
         $(".ui.modal.transaction").modal('show')
+        $("#code").html(transaction)
 
 
 

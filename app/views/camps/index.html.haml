@@ -1,0 +1,27 @@
+%h1 Listing camps
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Bitcoin address
+    %th Start date
+    %th End date
+    %th
+    %th
+    %th
+
+  - @camps.each do |camp|
+    %tr
+      %td= camp.name
+      %td= camp.description
+      %td= camp.bitcoin_address
+      %td= camp.start_date
+      %td= camp.end_date
+      %td= link_to 'Show', camp
+      %td= link_to 'Edit', edit_camp_path(camp)
+      %td= link_to 'Destroy', camp, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Camp', new_camp_path

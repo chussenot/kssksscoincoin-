@@ -1,0 +1,20 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @campaign.name
+.ui.segment  
+  %p
+    = @campaign.description
+%p
+  %b Bitcoin address:
+  = @campaign.bitcoin_address
+%p
+  %b Start date:
+  = @campaign.start_date
+%p
+  %b End date:
+  = @campaign.end_date
+.ui.button.add_pledge.red{"data-bitcoin_address"=> @campaign.bitcoin_address}= 'Fund this project'
+
+= link_to 'Back', campaigns_path

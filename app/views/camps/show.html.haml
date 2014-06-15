@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @camp.name
+%p
+  %b Description:
+  = @camp.description
+%p
+  %b Bitcoin address:
+  = @camp.bitcoin_address
+%p
+  %b Start date:
+  = @camp.start_date
+%p
+  %b End date:
+  = @camp.end_date
+
+= link_to 'Edit', edit_camp_path(@camp)
+\|
+= link_to 'Back', camps_path

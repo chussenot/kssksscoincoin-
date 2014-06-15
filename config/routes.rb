@@ -1,9 +1,7 @@
 Kssksscoincoin::Application.routes.draw do
-  get "home/index"
+  resources :campaigns
 
-  get "campaign/index"
-  get "campaign/show"
-  get "campaign/create"
+  get "home/index"
 
   get "profile/show"
   get "profile/activity"

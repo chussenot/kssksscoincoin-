@@ -8,8 +8,8 @@ window.KssKss.Menu = class Menu
         {btn: 'a.item.profile',      url: '/profile/show'},
         {btn: 'a.item.activity',     url: '/profile/activity'},
         {btn: 'a.item.campaigns',    url: '/profile/campaigns'},
-        {btn: '.item.campaign.create',    url: '/campaign/create'},
-        {btn: '.item.campaign.list',    url: '/profile/campaigns'},
+        {btn: '.item.campaign.create',    url: '/campaigns/new'},
+        {btn: '.item.campaign.list',    url: '/campaigns'},
         {btn: 'a.item.coinscoins',   url: '/profile/coinscoins'},
         {btn: 'a.item.settings',   url: '/profile/settings'},
         {btn: 'a.item.contact',      method: KssKss.Menu.openContact}

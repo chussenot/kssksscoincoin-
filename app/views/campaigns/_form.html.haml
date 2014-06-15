@@ -1,0 +1,14 @@
+= simple_form_for(@campaign) do |f|
+  = f.error_notification
+
+  .ui.form.form-inputs
+    = f.input :name
+    = f.input :description, as: :text
+    = f.input :bitcoin_address
+    = f.input :start_date, placeholder: "xx/xx/xxxx"
+    = f.input :end_date, class: 'date field', placeholder: "xx/xx/xxxx"
+  %br/
+  .form-actions
+    = link_to 'Back', campaigns_path, class: 'ui button red'
+    = f.button :submit, class: 'ui button green'
+%br/

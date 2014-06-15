@@ -1,0 +1,27 @@
+%h2.ui.header
+  %i.list.icon
+  .content
+    Listing Campaigns
+    .sub.header See KssKss Campaigns
+
+%table.ui.two.column.table.segment
+  %thead
+    %tr
+      %th Campaign
+      %th 
+  %tbody
+    - @campaigns.each do |campaign|
+      %tr
+        %td 
+          %p
+            %h2= campaign.name
+          %p= campaign.description
+          = link_to 'Show this campaign', campaign, class: 'ui button green show_campaign'
+        %td
+          .ui.striped.progress
+            .bar{style:'width: 30%'}
+          .ui.attached.segment  
+            %p Raise B40 of B100
+          .ui.button.add_pledge.red{"data-bitcoin_address"=> campaign.bitcoin_address}= 'Fund this project'
+
+%br

@@ -1,3 +1,5 @@
+
+
 class API < Grape::API
   format :json
 	get :ping do
@@ -5,6 +7,10 @@ class API < Grape::API
 	end
 
   post :option do
-    {payload: 'GKèg!hjk7890gkjhb769'}
+    {payload: @@bitcoind.listtransactions()}
+  end
+
+  get :transactions do
+    {payload: @@bitcoind.listtransactions()}
   end
 end

@@ -10,4 +10,7 @@ class ProfileController < ApplicationController
 
   def campaigns
   end
+
+  def settings
+  end
 end

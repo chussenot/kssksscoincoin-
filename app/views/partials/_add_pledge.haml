@@ -1,0 +1,18 @@
+.ui.modal.add_pledge
+  %i.close.icon
+  .header
+    Add Pledge
+  .ui.form.segment
+    .field.fluid
+      %label Transaction id
+      %input{placeholder: "Transaction id", type: "text", name: "transaction_id"}/
+    .two.fields
+      .field
+        %label Vout
+        %input{placeholder: "Vout", type: "text", name: "vout"}/
+      .field
+        %label Amount
+        %input{placeholder: "Amount", type: "text", name: "pledge_amount"}/
+  .actions
+    .ui.button Cancel
+    .ui.button.request_option OK

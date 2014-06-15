@@ -3,6 +3,7 @@ class Campaign
 
   field :name,            type: String
   field :description,     type: String
+  field :bitcoin_address, type: String
   field :start_date,      type: Date
   field :end_date,        type: Date
 

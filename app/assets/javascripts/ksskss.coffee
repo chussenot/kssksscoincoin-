@@ -7,14 +7,14 @@ window.KssKss.Application = class Application
     @bindEvents()
     KssKss.Menu.init()
   @bindEvents = () ->
-    $('.ui.button.add_option').click ->
-      $(".ui.modal.add_option").modal('show')
+    $('.ui.button.add_pledge').click ->
+      $(".ui.modal.add_pledge").modal('show')
     $('.ui.button.request_option').click ->
     	$.post("api/pledge",
-        transaction_id: "e3ba2ac29c70b3c5183adf0ca4ef9d7578ff0db4d857ffc94a7ca8c105a7fca8"
-        vout: 0
+        transaction_id: $('input[name="transaction_id"]').val()
+        vout: $('input[name="vout"]').val()
         bitcoin_address: "mjADUJra6U1jDsdHXZ6JwAU4iaVKMzaXi7"
-        pledge_amount: 0.34113
+        pledge_amount: $('input[name="pledge_amount"]').val()
       ).done (transaction) ->
         console.log transaction
 

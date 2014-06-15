@@ -26,7 +26,8 @@ big_company = Company.create({
 		name: Faker::Company.name,
 		description: Faker::Lorem.paragraph,
 		start_date: start_date,
-		end_date: start_date + 3.months
+		end_date: start_date + 3.months,
+		bitcoin_address: 'mjADUJra6U1jDsdHXZ6JwAU4iaVKMzaXi7'
 	})
 	c.create_transaction 100, 1000
 	c.save

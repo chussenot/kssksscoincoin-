@@ -1,0 +1,6 @@
+:gaston:
+  bitcoind:
+    uri: http://bitcoinrpc:4qEr2cjErLH6Dd6mvgBcViPMRw2eXrvxBXhDAcVXK1zi@91.121.3.32:18332
+:production:
+  :bitcoind:
+    uri: <%= ENV["BITCOIND_URI"] %>

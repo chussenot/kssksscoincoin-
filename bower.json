@@ -16,6 +16,7 @@
     "jquery": "~2.1.1",
     "lodash": "~2.4.1",
     "semantic-ui": "~0.18.0",
-    "momentjs": "~2.7.0"
+    "momentjs": "~2.7.0",
+    "bip39": "git@github.com:weilu/bip39.git#~1.1.0"
   }
 }
